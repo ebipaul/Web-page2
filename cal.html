@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="zlip/ucss/ualign1.css">
+</head>
+
+<center>
+    <h1>calculator</h1>
+</center>
+<script>
+    function btn_onclick(aop) {
+        fno = Number(numfno.value);
+        sno = Number(numsno.value);
+        if (aop == '+') {
+            res = fno + sno;
+        } else if (aop == '-') {
+            res = fno - sno;
+        } else if (aop == '*') {
+            res = fno * sno;
+        } else if (aop == '/') {
+            res = fno / sno;
+        } else if (aop == '%') {
+            res = fno % sno;
+        }
+        numres.value = res;
+    }
+</script>
+<center>
+    <table border="1">
+        <tr>
+            <td>First Number</td>
+            <td><input type="number" id="numfno" placeholder="0" /></td>
+        </tr>
+        <tr>
+            <td>second Number</td>
+            <td><input type="number" id="numsno" placeholder="0" /></td>
+        </tr>
+        <tr>
+            <td>Result</td>
+            <td><input type="text" id="numres" placeholder="0" readonly="readonly" /></td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="Cancel" onclick="location.href='cal.html';" />
+                <input type="button" value="+" onclick="btn_onclick('+');" />
+                <input type="button" value="-" onclick="btn_onclick('-');" />
+                <input type="button" value="x" onclick="btn_onclick('*');" />
+                <input type="button" value="/" onclick="btn_onclick('/');" />
+                <input type="button" value="%" onclick="btn_onclick('%');" />
+            </td>
+        </tr>
+</center>
+</table>

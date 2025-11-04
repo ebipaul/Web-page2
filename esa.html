@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="zlip/ucss/ualign1.css">
+</head>
+<head>
+    <script>
+        function btnFind_onclick(){
+            var sal,hra,da,Pf,gp,np;
+            sal= hra = da= Pf = gp = np = 0;
+            sal= numSal.value;
+            sal = parseFloat(sal);
+            
+            hra = sal* 15/100;
+            da =  sal* 20/100;
+            Pf = sal* 35/100;
+            gp = sal + hra + da;
+            np = gp - Pf;
+
+            numRnt.value=hra;
+            numAlns.value=da;
+            numPrfn.value=Pf;
+            numGrpa.value=gp;
+            numnxt.value=np;
+        }
+    </script>
+    
+</head>
+
+<body>
+    <center>
+        <Caption>Exam Result</Caption>
+        <table border="1">
+            <tr>
+                <td>Employee Id</td>
+                <td>
+                    <input type="number" id="numEid" placeholder="0">
+                </td>
+            </tr>
+            <tr>
+                <td>Employee Name</td>
+                <td><input type="text" id="tbxEname" placeholder="0"></td>
+            </tr>
+            <tr>
+                     <td>Salary</td>
+                     <td><input type="number" id="numSal" placeholder="0"></td>
+            </tr>
+            <tr>
+                    <td>House Rent AllowanceS</td>
+                    <td><input type="number" id="numRnt" placeholder="0" readonly="readonly"></td>
+            </tr>
+           
+            <tr>
+                    <td>Dearness AllowanceS </td>
+                    <td><input type="number" id="numAlns" placeholder="0" readonly="readonly"></td>
+            </tr>
+
+            <tr>
+                    <td> Procident Fund </td>
+                    <td><input type="number" id="numPrfn" placeholder="0" readonly="readonly"></td>
+            </tr>
+
+            <tr>
+                    <td> Gross Pay </td>
+                    <td><input type="number" id="numGrpa" placeholder="0" readonly="readonly"></td>
+            </tr>
+
+            <tr>
+                    <td> Next Pay </td>
+                    <td><input type="number" id="numnxt" placeholder="0" readonly="readonly"></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" value="cancel" onclick="location.href= 'esa.html';"></td>
+                <td><input type="button" value="Find" onclick="btnFind_onclick();"></td>
+            </tr>
+            
+        </table>
+    </center>
+</body>

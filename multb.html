@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="zlip/ucss/ualign1.css">
+</head>
+
+<script>
+    function btnFind_onclick() {
+        // alert(Date());
+        
+        
+
+
+        let mn = numMn.value;
+        let res = "";
+        for (let i = 1; i <= 21; i++) {
+            res += (i + "X" + mn + "=" + (i * mn)) + "\n";
+        }
+        // document.write(res);
+        tares.value = res;
+    }
+
+</script>
+<table border="1">
+    <tr>
+        <td>Multiplication Number</td>
+        <td>
+            <input type="number" id="numMn" placeholder="0" />
+        </td>
+
+    </tr>
+
+    <tr>
+        <td>Result</td>
+        <td>
+            <textarea id="tares" rows="20" cols="14" readonly="readonly" style="resize: none;"></textarea>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <input type="button" value="Cancel" onclick="location.href='multb.html';" />
+        </td>
+
+        <td>
+            <input type="button" value="Find" onclick="btnFind_onclick();" />
+        </td>
+    </tr>
+
+
+
+</table>
